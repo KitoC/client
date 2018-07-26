@@ -5,11 +5,10 @@ import { setJwt } from '../../../../Api/init'
 import StaffRegister from './StaffRegister'
 import StaffLogin from './StaffLogin'
 import store from '../../../../Redux/store'
-import helpers from '../../../../Helpers'
+import {api} from '../../../../Helpers'
 import AllStaff from '../AllStaff/AllStaff'
 
 
-const { api } = helpers
 
 class StaffContainer extends Component {
     // These 'StoreStaff' functions are to set and retrieve data form localStorage in the staff browser

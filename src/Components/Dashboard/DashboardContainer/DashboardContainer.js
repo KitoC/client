@@ -38,10 +38,10 @@ class Dashboard extends Component {
                     </LogoBackground> 
                         
                         <Route path='/dashboard/orders' component={OrdersContainer} />
-                        <Route path='/dashboard/products' render={() => {
+                        <Route path='/dashboard/products' render={(rProps) => {
                             if (authorization.isSupplier()) {
                                 return(
-                                    <ProductsContainer />
+                                    <ProductsContainer {...rProps} />
                                 )
 
                             } else {
