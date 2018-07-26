@@ -33,9 +33,9 @@ const Switchboard = (props) => {
                         <AuthenticationContainer {...rProps}  />
                     )} />
 
-                    <Route path='/dashboard/staff/new' render={(rProps) => (
+                    {/* <Route path='/dashboard/staff/new' render={(rProps) => (
                         <StaffContainer {...rProps}  />
-                    )} />
+                    )} /> */}
 
                     <Route path='/staffLogin' render={(rProps) => (
                         <StaffContainer {...rProps}  />

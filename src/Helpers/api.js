@@ -136,27 +136,27 @@ class ApiMethods {
     authenticateStaff = async (newStaff, url, func) => {
         try {
 
-            const response = await axiosApi.post(`/staff${url}`, newStaff)
+            const response = await axiosApi.post(`/staff/register`, newStaff)
 
-            const token = response.data.token
-            const staff = token && decodeJWT(token)
-            staff.token = token
+            // const token = response.data.token
+            // const staff = token && decodeJWT(token)
+            // staff.token = token
 
-            setJwt(staff)
+            // setJwt(staff)
 
-            store.dispatch({
-                type: 'set_loggedIn',
-                loggedIn: true,
-                currentStaff: staff
-            })
+            // store.dispatch({
+            //     type: 'set_loggedIn',
+            //     loggedIn: true,
+            //     currentStaff: staff
+            // })
 
-            func && func(staff)
+           // func && func(staff)
 
           
         } catch (error) {
             store.dispatch({
                 type: 'set_loginError',
-                loginError: error.response.data
+                loginError: error.response && error.response.data ? error.response.data : ''
             })
         }
 
