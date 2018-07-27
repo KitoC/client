@@ -127,7 +127,7 @@ class ApiMethods {
         } catch (error) {
             store.dispatch({
                 type: 'set_loginError',
-                loginError: error.response.data
+                loginError: error.response
             })
         }
 

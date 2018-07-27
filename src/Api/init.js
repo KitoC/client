@@ -3,7 +3,8 @@ import axios from 'axios'
 
 // Create an axios instance
 const axiosApi = axios.create({
-    baseURL: 'http://localhost:3001' // API server
+    // baseURL: 'http://localhost:3001' // API server dev
+    baseURL: 'https://damp-lake-48963.herokuapp.com' // API server prod
 })
 
 // Add the bearer token to the axios instance
